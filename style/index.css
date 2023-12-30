@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(31, 31, 31);
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header>div {
+    margin: 0 10px;
+}

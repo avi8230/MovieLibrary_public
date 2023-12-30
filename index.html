@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/list.css">
+    <link rel="stylesheet" href="./style/search.css">
+    <link rel="stylesheet" href="./style/genres.css">
+    <link rel="stylesheet" href="./style/favorites.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- Gentes -->
+        <div class="genre-selection">
+            <label for="genres-select" class="select-label">Select a genre:</label>
+            <select id="genres-select" class="select-box"></select>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter movie title" class="search-input">
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+
+        <!-- favorites -->
+        <div class="favorites-container-div">
+            <span id="favoritesIcon"><i id="favorites" class="fa-solid fa-heart"></i> Favorites</span>
+            <div id="favorites-container"></div>
+        </div>
+    </header>
+
+    <!-- List -->
+    <h1>Movies List</h1>
+    <div id="movies-list"></div>
+
+    <!-- Movie Details -->
+    <div id="movie-details-overlay">
+        <div>
+            <div>
+                <img id="movie-details-image" alt="Movie Poster">
+            </div>
+            <div>
+                <h2 id="movie-details-title"></h2>
+                <a id="movie-details-trailer">Play trailer</a>
+                <p id="movie-details-release-date"></p>
+                <p id="movie-details-overview"></p>
+                <p id="movie-details-rating"></p>
+            </div>
+        </div>
+        <div>
+            <button id="close-button">Close</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script type="module" src="./scripts/list.mjs"></script>
+    <script type="module" src="./scripts/search.mjs"></script>
+    <script type="module" src="./scripts/genres.mjs"></script>
+    <script type="module" src="./scripts/events.js"></script>
+    <script type="module" src="./scripts/favorites.mjs"></script>
+
+</body>
+
+</html>

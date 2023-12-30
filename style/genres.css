@@ -1,0 +1,20 @@
+.genre-selection {
+    margin-bottom: 20px;
+}
+
+.select-label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.select-box {
+    padding: 8px;
+    font-size: 14px;
+    background-color: inherit;
+    color: aliceblue;
+}
+
+option { 
+    background-color: rgb(31, 31, 31);
+    color: aliceblue;
+}

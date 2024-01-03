@@ -4,10 +4,10 @@
 const apiKey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 // =========================================================
+// Function to fetch popular movies from The Movie Database
 // Movie Database API Documentation:
 // https://developer.themoviedb.org/docs/finding-data
 // https://developer.themoviedb.org/reference/trending-all
-// Function to fetch popular movies from The Movie Database
 async function fetchMovies() {
     const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc`;
     try {
@@ -27,9 +27,9 @@ async function fetchMovies() {
 }
 
 // =========================================================
+// Function to fetch the trailer for a specific movie from The Movie Database
 // Movie Database API Documentation:
 // https://developer.themoviedb.org/reference/movie-videos
-// Function to fetch the trailer for a specific movie from The Movie Database
 async function fetchTrailer(movieId) {
     const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}&language=en-US`;
     try {
@@ -54,9 +54,9 @@ async function fetchTrailer(movieId) {
 }
 
 // =========================================================
+// Function to search for movies using The Movie Database API
 // Movie Database API Documentation:
 // https://developer.themoviedb.org/reference/search-movie
-// Function to search for movies using The Movie Database API
 async function searchMovies(query) {
     const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false`;
     try {
@@ -103,9 +103,9 @@ async function fetchGenres() {
 }
 
 // =========================================================
+// Function to fetch movies by genre from The Movie Database API
 // Movie Database API Documentation:
 // https://developer.themoviedb.org/reference/discover-movie
-// Function to fetch movies by genre from The Movie Database API
 async function getMoviesByGenre(genreId) {
     const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&with_genres=${genreId}`;
     try {
